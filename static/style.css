@@ -5,7 +5,6 @@ body {
 
 .container {
   width: 960px;
-  height: 100%;
   margin: auto;
   padding: 20px;
   background-color: white;
@@ -20,8 +19,10 @@ hero {
   grid-template-rows: 2fr 1fr;
 }
 
-h1, h2, h3 {
-  font-family: 'Rowdies', cursive;
+h1,
+h2,
+h3 {
+  font-family: "Rowdies", cursive;
 }
 
 hero h1 {
@@ -34,7 +35,7 @@ hero h1 {
   font-size: 80px;
   color: white;
   text-shadow: 1px 1px 5px black, 3px 3px 2px orange, -3px -1px 2px blue;
-  font-family: 'Rowdies', cursive;
+  font-family: "Rowdies", cursive;
 }
 
 logo {
@@ -83,14 +84,14 @@ hero button {
   display: flex;
   background-color: blue;
   color: white;
-  font-family: 'Rowdies', cursive;
+  font-family: "Rowdies", cursive;
   z-index: 2;
 }
 
 .header h2 {
   font-size: 45px;
   text-shadow: 1px 1px 5px black, 3px 3px 2px orange, -3px -1px 2px blue;
-  font-family: 'Rowdies', cursive;
+  font-family: "Rowdies", cursive;
   padding: 10px;
   display: block;
   flex-basis: 400px;
@@ -119,12 +120,14 @@ hero button {
   overflow: hidden;
 }
 
-.auth {
-  display: none;
+.login {
+  display: block;
+}
+
+.register {
 }
 
 .chat {
-  display: none;
   /* display: grid; */
   grid-template-columns: 1fr 2fr;
   height: 100%;
@@ -133,13 +136,12 @@ hero button {
 .chat .comment_box {
   margin-right: 20px;
   padding-right: 20px;
-  height: 100%;
   border-right: 8px solid lightgray;
 }
 
 .chat .comment_box textarea {
   display: block;
-  width: 100%
+  width: 100%;
 }
 
 .chat .comment_box button {
@@ -151,26 +153,19 @@ hero button {
 
 .chat .comment_box label {
   display: block;
-  font-family: 'Rowdies', cursive;
+  font-family: "Rowdies", cursive;
   margin-bottom: 10px;
 }
 
 .chat .messages {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  grid-template-rows: min-content;
-  grid-auto-rows: min-content;
-  height: auto;
 }
 
-.chat message {
-  display: grid;
-  grid-column: 1/3;
-  grid-template-columns: 200px 1fr;
+.message {
+  display: flex;
   border-bottom: 1px solid lightgray;
 }
 
-.chat message author {
+.author {
   color: #c93;
   font-weight: bold;
   display: block;
@@ -178,7 +173,7 @@ hero button {
   grid-column: 1/2;
 }
 
-.chat message content {
+.content {
   display: block;
   padding: 5px;
   grid-column: 2/3;

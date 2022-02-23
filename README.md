@@ -1,3 +1,5 @@
+NOTES: The user cannot access anything, even via magic link without beign logged in\*\*\*
+
 # Exercise #6: Watch Party 2: The Single Page Experience
 
 10 points
@@ -6,7 +8,7 @@
 
 ### Instructions
 
-For this exercise, we will build a *single-page* group chat web application with
+For this exercise, we will build a _single-page_ group chat web application with
 asynchronous Javascript and a REST API written in Python with Flask.
 
 Like the original, Watch Party 2 lets users start group chats with
@@ -54,6 +56,7 @@ in the
 and [Flask](https://flask.palletsprojects.com/en/2.0.x/installation/). You'll
 notice that there are some routes in `app.py` to get you started, and some that
 you will need to add. Make sure that you:
+
 - Prompt users to enter a username and password to sign up or log in
 - Display a list of chats a logged in user is currently in, with a button to
   create a new one.
@@ -77,31 +80,39 @@ requirements) is inspired by [yap.chat](https://yap.chat/).
 ### Rubric
 
 One point each for:
-- Remember permissions:
-  - Usernames are unique. When a user with an auth key creates a chat or enters
-  one with a magic link, save on the server that they have permission to use
-  that chat room. **[1 pt]**
-  - API endpoint to list which rooms a user is in. **[1 pt]**
-  - Optionally, you may let users name/rename rooms [0 pts]
-- Single-Page UI:
-  - Have only one HTML file, containing the elements to display
-    either the login screen, a list of chats the user is in, or the screen for a
-    single chat (list messages sent, display the magic invite link, fields to
-    enter a new message), and showing or hiding the elements as appropriate.
-    **[1 pt]**
-  - The entire app runs without reloading the page. **[1 pt]**
+
+- Frontend
+
+  - [x] Usernames are unique. When a user with an auth key creates a chat or enters
+        one with a magic link, save on the server that they have permission to use
+        that chat room. **[1 pt]**
+
+  - [x] Have only one HTML file, containing the elements to display
+        either the login screen, a list of chats the user is in, or the screen for a
+        single chat (list messages sent, display the magic invite link, fields to
+        enter a new message), and showing or hiding the elements as appropriate.
+
+  - [x] Push Single-Page State to the Navigation Bar: Use the History API to set which
+        page the user has navigated to.
+
+* [x] Users can use the Back button to navigate back to a chat page **[1 pt]**
+
+* [x] Users can use the Back button to navigate back to the index page
+      **[1 pt]**
+
+- [x] Clear the magic passphrase from the navigation bar after one has been used.
+      **[1 pt]**
+  - [x] The entire app runs without reloading the page. **[1 pt]**
 - State from Navigation Bar: Users should be able to exit their browser and
   return to any URL the app presents to them.
-  - Front end pulls the chat_id from the navigation bar as needed **[1 pt]**
-  - Front end pulls the magic passphrase from the navigation bar as needed
-    **[1 pt]**
-- Push Single-Page State to the Navigation Bar: Use the History API to set which
-  page the user has navigated to.
-    - Users can use the Back button to navigate back to a chat page **[1 pt]**
-    - Users can use the Back button to navigate back to the index page
-      **[1 pt]**
-- Clear the magic passphrase from the navigation bar after one has been used.
+- [x] Front end pulls the chat_id from the navigation bar as needed **[1 pt]**
+- [x] Front end pulls the magic passphrase from the navigation bar as needed
+
   **[1 pt]**
-- Asyncronously Post and Fetch New Messages: Use asynchronous calls to the JSON
-  API to post and fetch new messages. Continuously poll for new messages from
-  other users and display them as they are written. **[1 pt]**
+
+- [x] Asyncronously Post and Fetch New Messages: Use asynchronous calls to the JSON
+      API to post and fetch new messages. Continuously poll for new messages from
+      other users and display them as they are written. **[1 pt]**
+
+  - Backend
+    - [x] API endpoint to list which rooms a user is in. **[1 pt]**
