@@ -1,5 +1,7 @@
 NOTES: The user cannot access anything, even via magic link without beign logged in\*\*\*
 
+- I asked a friedn who works in web development to spend soem tiem with me on a sunday to walk through how you would structure a project of this size and go about completing it. They also helped me work through some parts that I was confused on.
+
 # Exercise #6: Watch Party 2: The Single Page Experience
 
 10 points
